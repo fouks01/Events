@@ -10,16 +10,18 @@ const circle = document.getElementById('circle');
 
 btn.onclick = function () {
     square.style.backgroundColor = inputText.value;
-    console.log(inputText.value);
 };
 
 e_btn.style.display = "none";
 
+span.textContent = '50%';
+circle.style.height = '50%';
+circle.style.width = '50%';
+
 const logger = function (event) {
-    span.textContent = event.target.value;
+    span.textContent = event.target.value + '%';
     circle.style.height = +inputRange.value + '%';
     circle.style.width = +inputRange.value + '%';
-    console.log(inputRange.value);
 };
 
 inputRange.addEventListener('input', logger);
